@@ -1,0 +1,11 @@
+G:\ISD\FightClub\FightClub\bin\Debug\FightClub.exe.config
+G:\ISD\FightClub\FightClub\bin\Debug\FightClub.exe
+G:\ISD\FightClub\FightClub\bin\Debug\FightClub.pdb
+G:\ISD\FightClub\FightClub\obj\Debug\FightClub.csprojResolveAssemblyReference.cache
+G:\ISD\FightClub\FightClub\obj\Debug\FightClub.Form1.resources
+G:\ISD\FightClub\FightClub\obj\Debug\FightClub.Properties.Resources.resources
+G:\ISD\FightClub\FightClub\obj\Debug\FightClub.csproj.GenerateResource.Cache
+G:\ISD\FightClub\FightClub\obj\Debug\FightClub.csproj.CoreCompileInputs.cache
+G:\ISD\FightClub\FightClub\obj\Debug\FightClub.exe
+G:\ISD\FightClub\FightClub\obj\Debug\FightClub.pdb
+G:\ISD\FightClub\FightClub\obj\Debug\FightClub.Auth.resources
