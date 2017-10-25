@@ -53,12 +53,13 @@
     </Compile>
     <Compile Include="BodyPart.cs" />
     <Compile Include="Computer.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FightClub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FightClub.Designer.cs">
+      <DependentUpon>FightClub.cs</DependentUpon>
     </Compile>
+    <Compile Include="Game.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerEventArgs.cs" />
@@ -67,8 +68,8 @@
     <EmbeddedResource Include="Auth.resx">
       <DependentUpon>Auth.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FightClub.resx">
+      <DependentUpon>FightClub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

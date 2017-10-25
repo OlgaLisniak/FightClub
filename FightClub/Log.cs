@@ -31,5 +31,10 @@ namespace FightClub
             }
             return s;
         }
+
+        public void Clear()
+        {
+            batcatalog.Clear();
+        }
     }
 }

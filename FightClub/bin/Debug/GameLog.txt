@@ -1,24 +1,22 @@
 Player Computer   HP: 80   Action: Received 20 damage
 
-Player h   HP: 80   Action: Received 20 damage
+Player л   HP: 100   Action: Hit to Body was blocked
+
+Player Computer   HP: 80   Action: Hit to Body was blocked
+
+Player л   HP: 80   Action: Received 20 damage
 
 Player Computer   HP: 60   Action: Received 20 damage
 
-Player h   HP: 60   Action: Received 20 damage
+Player л   HP: 60   Action: Received 20 damage
 
 Player Computer   HP: 40   Action: Received 20 damage
 
-Player h   HP: 60   Action: Hit to Body was blocked
+Player л   HP: 60   Action: Hit to Body was blocked
 
 Player Computer   HP: 20   Action: Received 20 damage
 
-Player h   HP: 40   Action: Received 20 damage
-
-Player Computer   HP: 20   Action: Hit to Body was blocked
-
-Player h   HP: 20   Action: Received 20 damage
-
-Player Computer   HP: 0   Action: Died
+Player л   HP: 40   Action: Received 20 damage
 
 
 

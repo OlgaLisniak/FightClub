@@ -1,6 +1,6 @@
 ﻿namespace FightClub
 {
-    partial class Form1
+    partial class FormFightClub
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFightClub));
             this.lblPlayer1 = new System.Windows.Forms.Label();
             this.lblPlayer2 = new System.Windows.Forms.Label();
             this.progressBarHPPlayer1 = new System.Windows.Forms.ProgressBar();
@@ -205,7 +205,7 @@
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
             // 
-            // Form1
+            // FormFightClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -226,8 +226,8 @@
             this.Controls.Add(this.progressBarHPPlayer1);
             this.Controls.Add(this.lblPlayer2);
             this.Controls.Add(this.lblPlayer1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormFightClub";
+            this.Text = "Fight Club";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

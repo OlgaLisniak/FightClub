@@ -4,15 +4,17 @@ using System.Windows.Forms;
 
 namespace FightClub
 {
-    public partial class Form1 : Form
+    public partial class FormFightClub : Form
     {
         Player player;
 
         Computer computer;
 
-        Log log = new Log();
+        Log log;
 
-        public Form1(string name)
+        Game game;
+
+        public FormFightClub(string name)
         {
             InitializeComponent();
 
@@ -22,19 +24,16 @@ namespace FightClub
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            game = new Game(this);
+            log = new Log();
+
             lblPlayer1.Text = player.Name;
             lblPlayer2.Text = computer.Name;
 
             progressBarHPPlayer1.Value = 100;
             progressBarHPPlayer2.Value = 100;
 
-            player.Block += log.BlockHandler;
-            player.Wound += log.WoundHandler;
-            player.Death += log.DeathHandler;
-
-            computer.Block += log.BlockHandler;
-            computer.Wound += log.WoundHandler;
-            computer.Death += log.DeathHandler;
+            game.AddEvent(player, computer, log);
         }
 
         int i = 0;
@@ -79,6 +78,12 @@ namespace FightClub
 
                         if (result == DialogResult.Yes)
                         {
+                            log.Clear();
+
+                            game.RemoveEvent(player, computer, log);
+
+                            log = new Log();
+                            
                             player = new Player(player.Name, 100);
                             computer = new Computer("Computer", 100);
 
@@ -88,15 +93,19 @@ namespace FightClub
                             lblHPPlayer1.Text = player.Hp.ToString();
                             lblHPPlayer2.Text = computer.Hp.ToString();
 
+                            game.AddEvent(player, computer, log);
+
                             i = 0;
 
                             lblNumbRound.Text = (i + 1).ToString();
                         }
                         else
                         {
+                            game.RemoveEvent(player, computer, log);
                             Close();
-                            Environment.Exit(0);
+                            Environment.Exit(0);  
                         }
+
                     }
                     else
                     {
@@ -130,6 +139,12 @@ namespace FightClub
                         DialogResult result = MessageBox.Show("Game over! \n You win :) \n Do you want to play again?", "", MessageBoxButtons.YesNo);
                         if (result == DialogResult.Yes)
                         {
+                            game.RemoveEvent(player, computer, log);
+
+                            log.Clear();
+
+                            log = new Log();
+
                             player = new Player(player.Name, 100);
                             computer = new Computer("Computer", 100);
                             progressBarHPPlayer1.Value = 100;
@@ -137,7 +152,8 @@ namespace FightClub
 
                             lblHPPlayer1.Text = player.Hp.ToString();
                             lblHPPlayer2.Text = computer.Hp.ToString();
-                            lbLog.Items.Clear();
+
+                            game.AddEvent(player, computer, log);
 
                             i = 0;
 
@@ -145,10 +161,10 @@ namespace FightClub
                         }
                         else
                         {
+                            game.RemoveEvent(player, computer, log);
                             Close();
                             Environment.Exit(0);
                         }
-
                     }
                     else
                     {
@@ -157,6 +173,7 @@ namespace FightClub
                         i++;
                     }
                 }
+            
             }
             battleLog = log.ToString();
             UpdateLB(battleLog);

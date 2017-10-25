@@ -14,7 +14,7 @@ namespace FightClub
         {
             if (tbName.Text != "")
             {
-                Form1 game = new Form1(tbName.Text);
+                FormFightClub game = new FormFightClub(tbName.Text);
 
                 Hide();
                 game.Show();
